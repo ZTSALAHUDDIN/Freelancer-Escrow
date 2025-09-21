@@ -1,17 +1,32 @@
-<<<<<<< HEAD
-# Sample Hardhat Project
+# Freelancer Escrow DApp
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+**Freelancer Escrow DApp** is a decentralized escrow platform built on **Shardeum Unstablenet** that enables secure, transparent, and fair freelance project management. Clients can create projects with milestone-based payments and reputation rewards, while freelancers receive funds only after completing milestones. Each milestone release generates an NFT receipt, providing verifiable proof of work.
 
-Try running some of the following tasks:
+---
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
-=======
-# Freelancer-Escrow
->>>>>>> 817b3c8f8f634b5c23983483b6f52819c98440b7
+## Features
+
+- **Connect Wallet**: Connect via MetaMask and display account address and network.
+- **Create Project**: Input freelancer address, project name, and dynamic milestones (amount, reputation reward, description). Sends `msg.value` equal to total milestone amounts + reputation rewards.
+- **Project Dashboard**: View project details by Project ID. Release or refund milestones (client only). Display NFT receipts (tokenId + tokenURI).
+- **Reputation & Balances**: Track freelancer reputation points and account balances.
+- **Transaction Feedback**: Shows Pending, Confirmed, or Failed status for transactions.
+- **Event Parsing**: Parses `MilestoneReleased` events to show NFT tokenId and tokenURI.
+
+---
+
+## Tech Stack
+
+- **Frontend**: React (functional components + hooks), JavaScript
+- **Blockchain Integration**: ethers.js v5
+- **Styling**: Tailwind CSS (optional, clean simple design)
+- **Network**: Shardeum Unstablenet
+
+---
+
+## Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/ZTSALAHUDDIN/Freelancer-Escrow.git
+cd Freelancer-Escrow
